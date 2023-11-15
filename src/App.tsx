@@ -10,21 +10,18 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import logo from "./static/images/logo.png";
-import { useReactMediaRecorder } from "react-media-recorder";
 import TextField from '@mui/material/TextField';
 import StopIcon from '@mui/icons-material/Stop';
 import { Fab, Paper } from '@mui/material';
 import Dashboard from './Dashboard/Dashboard';
 import Profil from './Profil/Profil';
-
+import ScreenRecording from './ScreenReccording';
 const settings = ['Profile', 'Dashboard'];
 
 function App() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [nav, setNAV] = React.useState<string>("DASHBOARD");
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-  // const { status, startRecording, stopRecording, mediaBlobUrl } =
-  //   useReactMediaRecorder({ screen: true });
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -119,13 +116,21 @@ function App() {
         <button onClick={startRecording}>Start Recording</button>
         <button onClick={stopRecording}>Stop Recording</button> */}
       </div>
-      <Fab style={{
+      {/* <Fab style={{
         position: 'absolute',
         bottom: 16,
         right: 16,
       }} color="error" aria-label="add">
         <StopIcon />
-      </Fab>
+      </Fab> */}
+      <ScreenRecording
+        screen={true}
+        audio={false}
+        video={false}
+        downloadRecordingPath="Screen_Recording_Demo"
+        downloadRecordingType="mp4"
+        emailToSupport="support@xyz.com"
+      ></ScreenRecording>
     </div >
   );
 }
