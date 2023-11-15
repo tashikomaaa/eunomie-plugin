@@ -1,47 +1,26 @@
-# Getting Started with Create React App
+## Installation du plugin en mode dev
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- tu clone le repos ```git clone https://github.com/tashikomaaa/eunomie-plugin.git```
+- ensuite tu install les dependances avec ```npm i```
+- ensuite tu build l'app avec ```npm run build```
+  
 
-## Available Scripts
+<img width="1440" alt="Capture d’écran 2023-11-15 à 14 46 30" src="https://github.com/tashikomaaa/eunomie-plugin/assets/25383800/1e9adf55-8cc4-4a06-aa7b-7dd0c5d3f7eb">
 
-In the project directory, you can run:
+- clicker sur les trois petits point en haut a droite
+- clicker sur extensions
+- clicker sur gérer les extensions
 
-### `npm start`
+<img width="293" alt="Capture d’écran 2023-11-15 à 14 47 43" src="https://github.com/tashikomaaa/eunomie-plugin/assets/25383800/526e03d1-6d58-491c-b166-f5b8c21ac7dc">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- clicker sur activer le mode devellopeur
 
-### `npm test`
+<img width="710" alt="Capture d’écran 2023-11-15 à 14 48 10" src="https://github.com/tashikomaaa/eunomie-plugin/assets/25383800/b2da3ca6-69cf-4430-b287-87d38b527ea9">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- ensuite clicker sur charger l'extension non empaquetée
+- selectionner le dossier build dans le projet du plugin
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# eunomie-plugin
+ et voilà tu devrais voir l'extension dans ton menu extension sur chrome
