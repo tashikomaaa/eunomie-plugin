@@ -16,9 +16,12 @@ import { Fab, Paper } from '@mui/material';
 import Dashboard from './Dashboard/Dashboard';
 import Profil from './Profil/Profil';
 import ScreenRecording from './ScreenReccording';
+import Login from './Login/Login';
+import './Login/login.css'
 const settings = ['Profile', 'Dashboard'];
 
 function App() {
+  const [user, setUser] = React.useState<any>(undefined);
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [nav, setNAV] = React.useState<string>("DASHBOARD");
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -49,7 +52,7 @@ function App() {
         break;
     }
   }
-  return (
+  return user ? (
     <div>
       <AppBar position="static" color='default'>
         <Container maxWidth="xl">
@@ -132,7 +135,9 @@ function App() {
         emailToSupport="support@xyz.com"
       ></ScreenRecording>
     </div >
-  );
+  ) : (
+    <Login />
+  )
 }
 
 export default App;
