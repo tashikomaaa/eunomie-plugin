@@ -1,6 +1,5 @@
 ## Installation du plugin en mode dev
 
-![Capture d’écran 2023-11-15 à 14 46 30 (2)](https://github.com/tashikomaaa/eunomie-plugin/assets/25383800/b3f961dd-7bfd-4114-9426-2a3294975a56)
 <img width="1440" alt="Capture d’écran 2023-11-15 à 14 46 30" src="https://github.com/tashikomaaa/eunomie-plugin/assets/25383800/1e9adf55-8cc4-4a06-aa7b-7dd0c5d3f7eb">
 
 - clicker sur les trois petits point en haut a droite
