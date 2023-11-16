@@ -126,17 +126,9 @@ function App() {
       }} color="error" aria-label="add">
         <StopIcon />
       </Fab> */}
-      <ScreenRecording
-        screen={true}
-        audio={false}
-        video={false}
-        downloadRecordingPath="Screen_Recording_Demo"
-        downloadRecordingType="mp4"
-        emailToSupport="support@xyz.com"
-      ></ScreenRecording>
     </div >
   ) : (
-    <Login />
+    <Login successLogin={(user) => setUser(user)}/>
   )
 }
 

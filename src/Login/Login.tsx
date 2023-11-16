@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export default class Login extends Component<{}, {email: string, password: string}> {
+export default class Login extends Component<{ successLogin: (user: any) => void }, { email: string, password: string }> {
     constructor(props: any) {
         super(props)
         this.state = {
@@ -10,18 +10,25 @@ export default class Login extends Component<{}, {email: string, password: strin
         }
     }
     async login() {
-        await fetch('http://172.232.54.227:3000/api/user/login', {
+        await fetch('http://172.232.54.227:3000/api/user/login' /* 'http://localhost:3000/api/user/login' */, {
             method: 'POST',
-            body: JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
-            }),
+            body: JSON.stringify(
+                {
+                    email: this.state.email,
+                    password: this.state.password
+                }
+            ),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
         })
             .then((response) => response.json())
             .then((data) => {
+                if (data.resultCode === "00047") {
+                    localStorage.setItem('ACCESS_TOKEN', data.accessToken)
+                    localStorage.setItem('REFRESH_TOKEN', data.refreshToken)
+                    this.props.successLogin(data.user)
+                }
                 console.log(data)
             })
             .catch((err) => {
@@ -34,12 +41,12 @@ export default class Login extends Component<{}, {email: string, password: strin
             <div className="Login">
 
                 <div className="input-container">
-                    <input type="text" value={this.state.email}  onChange={(e) => this.setState({email: e.target.value})} placeholder="email" />
+                    <input type="text" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} placeholder="email" />
                     <i className="zmdi zmdi-account zmdi-hc-lg"></i>
                 </div>
 
                 <div className="input-container">
-                    <input type="password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}placeholder="mot de pasee" />
+                    <input type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} placeholder="mot de pasee" />
                     <i className="zmdi zmdi-lock zmdi-hc-lg"></i>
                 </div>
 
